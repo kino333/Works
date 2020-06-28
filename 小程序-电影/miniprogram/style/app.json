@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff2121",
+    "navigationBarTitleText": "电影小程序——1号",
+    "navigationBarTextStyle": "white"},
+    "tabBar": {
+      "color":"#808080",
+      "selectedColor":"#ff461f",
+      "list": [{
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/movie.png",
+        "selectedIconPath": "images/movie1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
+      }]
+    },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
