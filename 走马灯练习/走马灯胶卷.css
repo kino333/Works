@@ -1,0 +1,34 @@
+div,
+img {
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    float: left;
+    height: 100px;
+    width: 150px;
+
+}
+
+#div1 {
+    width: 500px;
+    height: 100px;
+    overflow: hidden;
+    border: solid blue 2px;
+
+}
+
+#div2,
+#div3 {
+    float: left;
+
+}
+
+#div4 {
+    width: 500%;
+    /*这个属性很重要 让容器有足够的宽度实现滚动*/
+    float: left;
+
+}

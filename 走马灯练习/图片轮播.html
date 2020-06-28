@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>图片轮播</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+</head>
+<style type="text/css">
+    body {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    #lunbo ul li {
+        width: 100%;
+        list-style: none;
+        width: 640px;
+        height: 250px;
+        background-color: #f00;
+        text-align: center;
+    }
+
+    #lunbo ul li:not(:first-child) {
+        display: none;
+    }
+
+    #banner_list img {
+        text-align: center;
+        width: 1000px;
+        height: 500px;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <!-- <div id="lunbo">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div> -->
+    <div id="banner_list">
+        <img src="img/1.jpg" alt="图片1" />
+        <img src="img/2.jpg" alt="图片2" />
+        <img src="img/3.jpg" alt="图片3" />
+        <img src="img/4.jpg" alt="图片4" />
+    </div>
+    <script type="text/javascript">
+        //因为使用了document，所以js需要放在需要执行的代码下面生效才能生效
+        var img = document.getElementsByTagName("img");
+        var num = 0;
+        var len = img.length;
+
+        setInterval(function () {
+            img[num].style.display = "none";
+            num = ++num == len ? 0 : num;
+            img[num].style.display = "inline-block";
+
+        }, 3000); //切换时间
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" src="jQuery/jquery-3.4.1.js"></script>
+
+    <title></title>
+
+</head>
+
+
+
+<body>
+
+    <div class="text">文本内容</div>
+
+    <button type="button" class="btn">按钮文字</button>
+
+</body>
+
+<script>
+    $(function () {
+
+        var texts = $(".text").text();
+
+        $(".btn").toggle(function () {
+
+                $(this).text(texts);
+
+            },
+
+            function () {
+
+                $(this).text('按钮文字');
+
+            },
+
+        );
+
+    });
+</script>
+
+
+
+</html>

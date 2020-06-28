@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- 保证不同语言不出现乱码 -->
+    <title>Cartoon</title>
+    <style type="text/css">
+        body,
+        div,
+        span {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            left: -200px;
+            top: 0;
+        }
+
+        #div1 span {
+            width: 20px;
+            height: 50px;
+            background: blue;
+            position: absolute;
+            left: 200px;
+            top: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="匀速动画效果.js"></script>
+    <div id="div1"><span id="share">分享</span></div>
+</body>
+
+</html>
