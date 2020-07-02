@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 计算器进阶试题</title> 
+<link href="计算器进阶试题.css" rel="stylesheet" type="text/css" />
+
+</head> 
+<body>
+  <script src="计算器进阶试题.js"></script>
+    <h1>CALCULATOR</h1>
+    <!--输出结果-->
+    <input type='text' id='fruit' /><br />
+    <!--按键界面-->
+    <!--第一行-->
+    <input type='button' class="ac"  value=' AC ' onclick = "AC()"/> 
+    <input type='button' class='ce'  value=' CE ' onclick = "CE()"/> 
+    <input type='button'   value=' ÷ '  onclick = "symbol4()"/> 
+    <input type='button'   value=' × '  onclick = "symbol3()"/> <br /> 
+    <!--第二行-->
+    <input type='button'   value=' 7 '  onclick = "count7()"/> 
+    <input type='button'   value=' 8 '  onclick = "count8()"/>
+    <input type='button'   value=' 9 '  onclick = "count9()"/>
+    <input type='button'   value=' - '  onclick = "symbol2()"/><br />  
+    <!--第三行-->
+    <input type='button'   value=' 4 '  onclick = "count4()"/>
+    <input type='button'   value=' 5 '  onclick = "count5()"/>
+    <input type='button'   value=' 6 '  onclick = "count6()"/> 
+    <input type='button'   value=' + '  onclick = "symbol1()"/><br />  
+    <!--第四行-->
+    <input type='button'   value=' 1 '  onclick = "count1()"/>
+    <input type='button'   value=' 2 '  onclick = "count2()"/>
+    <input type='button'   value=' 3 '  onclick = "count3()"/> <br />
+    <!--第五行-->
+    <input type='button'  class='zero' value=' 0 '  onclick = "count()"/>
+    <input type='button'   value=' . '  onclick = "spot()"/><br />
+    <input type='button'  class='equal' value=' = '  onclick = "equal()"/> 
+</body>
+</html>

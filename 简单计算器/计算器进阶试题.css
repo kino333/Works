@@ -1,0 +1,36 @@
+h1{
+    color:#4B0082;
+}
+#fruit{
+    height:70px;
+    width:220px;
+    background-color: #B0C4DE;
+    border-radius:8px; 
+    text-align:right;
+}
+input{
+    width:52px;
+    height:28px;
+    border-radius:8px;
+    font-size: 18px;    
+}
+.ac,.ce{
+    background-color:#FFA07A;
+    border-radius:8px; 
+    font-size: 18px;  
+}
+.zero{
+    width:108.5px;
+    height:28px;
+    border-radius:8px; 
+    font-size: 18px; 
+}
+.equal{
+    width:52px;
+    height:56.3px;
+    position: absolute;
+    left:178px;
+    top:245px;
+    border-radius:8px;
+    font-size:18px;
+}
