@@ -1,0 +1,46 @@
+body {
+    background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+}
+
+#all {
+    filter: drop-shadow(1px 0px 1px #ccc,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #fff,
+            0 0 40px #ff00de,
+            0 0 70px #ff00de,
+            0 0 80px #ff00de,
+            0 0 100px #ff00de,
+            0 0 150px #ff00de, )
+}
+
+div.circle {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background: #9da;
+    border-radius: 50px 50px 0 0;
+    /* left: 100px;
+    top: 50px; */
+
+}
+
+
+div.semi-circle {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    background: #9da;
+    border-radius: 50px 50px 0 0;
+    left: 99px;
+}
+
+.ss {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 100px solid #9da;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+
+}
