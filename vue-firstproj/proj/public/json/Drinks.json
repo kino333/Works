@@ -1,0 +1,33 @@
+[{
+        "goodName": "柠檬薄荷冰饮",
+        "img": "img/Drinks/柠檬薄荷冰饮.jpg"
+    },
+    {
+        "goodName": "草莓沙冰",
+        "img": "img/Drinks/草莓沙冰.jpg"
+    },
+    {
+        "goodName": "鲜橙冰饮",
+        "img": "img/Drinks/鲜橙冰饮.jpg"
+    },
+    {
+        "goodName": "草莓冰饮",
+        "img": "img/Drinks/草莓冰饮.jpg"
+    },
+    {
+        "goodName": "水果奶昔",
+        "img": "img/Drinks/水果奶昔.jpg"
+    },
+    {
+        "goodName": "巧克力奶盖",
+        "img": "img/Drinks/巧克力奶盖.jpg"
+    },
+    {
+        "goodName": "现磨黑咖啡",
+        "img": "img/Drinks/现磨黑咖啡.jpg"
+    },
+    {
+        "goodName": "苹果茶",
+        "img": "img/Drinks/苹果茶.jpg"
+    }
+]
