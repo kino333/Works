@@ -1,0 +1,162 @@
+html,
+body {
+    background-color: #DFE0E1;
+    /* #9AB7D0  #5C909D*/
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* 使.four-box自适应居中 */
+.four-box {
+    float: left;
+    padding: 2% 4.5%;
+    width: 96%;
+    height: 96%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 取一部分图片显示 */
+#div1 {
+    background: url(jpg/picture.jpg) no-repeat;
+    /* 从左上角的0 0点开始 */
+    height: 96%;
+    /* 第一张图片的高度 */
+    width: 22%;
+    /* 第一张图片的宽度 */
+    float: left;
+    opacity: 0.7;
+    position: relative;
+    background-size: cover;
+
+}
+
+#div1:hover {
+    opacity: 1;
+
+}
+
+#div2 {
+    background: url(jpg/picture.jpg) -250px no-repeat;
+    /* 负数x往右移,负数y往上移 */
+    height: 96%;
+    /* 第二张图片的高度 */
+    width: 22%;
+    /* 第二张图片的宽度 */
+    float: left;
+    margin-left: 27px;
+    opacity: 0.8;
+    position: relative;
+}
+
+#div2:hover {
+    opacity: 1;
+}
+
+#div3 {
+    background: url(jpg/picture.jpg) -550px no-repeat;
+    height: 96%;
+    width: 22%;
+    float: left;
+    margin-left: 27px;
+    opacity: 0.8;
+    position: relative;
+}
+
+#div3:hover {
+    opacity: 1;
+}
+
+#div4 {
+    background: url(jpg/picture.jpg) -650px no-repeat;
+    height: 96%;
+    width: 22%;
+    float: left;
+    margin-left: 27px;
+    opacity: 0.8;
+    position: relative;
+    background-size: cover;
+}
+
+#div4:hover {
+    opacity: 1;
+}
+
+h2 {
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px #CCCC99;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    width: 15%;
+}
+
+/* 悬浮字体突出显示 */
+#div1:hover #about-me {
+    top: 5px;
+    left: 5px;
+    width: 22%;
+    z-index: 9999999;
+}
+
+#div2:hover #skill {
+    top: 5px;
+    left: 5px;
+    width: 22%;
+    z-index: 9999999
+}
+
+#div3:hover #works {
+    top: 5px;
+    left: 5px;
+    width: 22%;
+    z-index: 9999999
+}
+
+#div4:hover #contact {
+    top: 5px;
+    left: 5px;
+    width: 22%;
+    z-index: 9999999
+}
+
+p {
+    position: absolute;
+    top: 25%;
+    text-align: left;
+    font-size: large;
+}
+
+#content {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+}
+
+img {
+    width: 50px;
+
+}
+
+.phone {
+    position: absolute;
+    left: 41%;
+}
+
+.text-phone {
+    position: absolute;
+    top: 105%;
+    left: 32%;
+}
+
+strong {
+    position: absolute;
+    left: 44%;
+}
