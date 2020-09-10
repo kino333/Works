@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsonp联想</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main img {
+            width: 300px;
+            height: 150px;
+            /* position: absolute; */
+            position: relative;
+            left: 50%;
+            margin-left: -150px;
+        }
+
+
+        .main input {
+            width: 650px;
+            height: 45px;
+            border: 1.5px #ccc solid;
+            border-radius: 15px;
+            /* 去除获得焦点时方角样式 */
+            outline: none;
+            position: absolute;
+            left: 50%;
+            margin-left: -325px;
+            /* 光标离文本框空两格距离 */
+            padding-left: 20px;
+        }
+
+        .main input:focus {
+            border: 1.5px #4C6CF4 solid;
+            position: relative;
+        }
+
+        ul {
+            list-style: none;
+            width: 650px;
+            border-left: 1.5px #ccc solid;
+            border-right: 1.5px #ccc solid;
+            position: absolute;
+            left: 50%;
+            margin-left: -315px;
+        }
+
+        li {
+            padding-top: 5px;
+        }
+
+        li:last-child {
+            border-bottom: 1.5px #ccc solid;
+        }
+
+        li:hover {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        /* 去除黄背景 */
+        input:-webkit-autofill,
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            background-color: rgb(0, 0, 0) !important;
+            background-image: none !important;
+            color: rgb(0, 0, 0) !important;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+            -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt=""><br />
+        <input type="text" id="search">
+    </div>
+    <ul id="list"></ul>
+    <script>
+        //https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=关键字&cb=回调函数名
+        var search = document.querySelector('#search');
+        var list = document.querySelector('#list');
+        search.onkeyup = function () {
+            var text = this.value;
+            //在这里需要一个script标签发来请求
+            var script = document.createElement('script');
+            script.src = `https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${text}&cb=fn`;
+            document.body.appendChild(script);
+            document.body.removeChild(script);
+        }
+        list.onmousedown = function (e) {
+            var target = e.target;
+            if (target.tagName === 'LI') {
+                search.value = target.innerHTML;
+                //mousedown之后会立马触发search的blur事件
+                // list.innerHTML = ''
+            }
+        }
+        //input失去焦点
+        search.onblur = function () {
+            list.innerHTML = ''
+        }
+
+        function fn(resp) {
+            console.log(resp);
+            var html = '';
+            resp.s.forEach(function (word) {
+                html += `<li>${word}</li>`;
+            })
+            list.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
