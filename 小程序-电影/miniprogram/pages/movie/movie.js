@@ -25,7 +25,7 @@ Page({
       console.log(res);
       // 成功在console显示结果
       this.setData({
-        movieList:this.data.movieList.concat(JSON.parse(res.result).subjects)
+        movieList:this.data.movieList.concat(JSON.parse(res.result).subject_collection_items)
       });
 // 设置新的云函数数据，json解析字符串，concat拼接
       wx.hideLoading();
@@ -39,6 +39,7 @@ Page({
     wx.navigateTo({
       url: `../comment/comment?movieid=${event.target.dataset.movieid}`,
     });
+    console.log(event.target.dataset.movieid);
   },
 
   /**

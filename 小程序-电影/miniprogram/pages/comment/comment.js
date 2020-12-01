@@ -97,23 +97,42 @@ db.collection('comment').add({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     this.setData({
       movieId:options.movieid
     })
-    console.log(options);
-    wx.cloud.callFunction({
-      name:"getDetail",
-      data:{
-        movieid:options.movieid
+    console.log(options.movieid);
+
+    wx.request({
+      url:`https://frodo.douban.com/api/v2/movie/${options.movieid}?apiKey=054022eaeae0b00e0fc068c0c0a2102a`,
+      method:"GET",
+      //header : {},
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          detail:res.data
+        });
+        wx.hideLoading();
+      },
+      fail:function(err){
+        console.error(err)
+        wx.hideLoading();
       }
-    }).then(res=>{
-      console.log(res);
-      this.setData({
-        detail:JSON.parse(res.result)
-      });
-    }).catch(err=>{
-      console.log(error);
-    }) 
+    })
+
+    // wx.cloud.callFunction({
+    //   name:"getDetail",
+    //   data:{
+    //     movieid:options.movieid
+    //   }
+    // }).then(res=>{
+    //   console.log(res);
+    //   this.setData({
+    //     detail:JSON.parse(res.result)
+    //   });
+    // }).catch(err=>{
+    //   console.log(err);
+    // }) 
   },
 
   /**
